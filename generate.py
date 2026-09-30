@@ -36,12 +36,13 @@ with open(os.path.join(HERE, "schedule.tsv"), "w") as f:
     for a, b, m in buckets:
         f.write(f"{a:%m%d}\t{b:%m%d}\t{m//60:02d}:{m%60:02d}\t{(m+LEAD)//60:02d}:{(m+LEAD)%60:02d}\n")
 
-slots = sorted({(d.month, m) for a, b, m in buckets
-                for d in days if a <= d <= b})
+# One entry per date, at its bucket's time. launchd ignores calendar entries
+# that set Month without Day, so month-wide entries never fire.
+slots = [(d, m) for a, b, m in buckets for d in days if a <= d <= b]
 entries = "\n".join(
-    f"        <dict><key>Month</key><integer>{mo}</integer>"
+    f"        <dict><key>Month</key><integer>{d.month}</integer><key>Day</key><integer>{d.day}</integer>"
     f"<key>Hour</key><integer>{m//60}</integer><key>Minute</key><integer>{m%60}</integer></dict>"
-    for mo, m in slots)
+    for d, m in slots)
 with open(PLIST, "w") as f:
     f.write(f"""<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

@@ -169,9 +169,33 @@ It's not perfect, but it's simple, and it's almost free.
 
 ---
 
-## What I actually learned
+## Update: launchd said no. Again.
 
-Not really about launchd.
+The next evening, 18:01 came and went.
+
+Nothing.
+
+18:06. Nothing.
+
+I had to play the reminder by hand so I wouldn't miss the sunset I'd built the whole thing for.
+
+So I set up two tiny test jobs for two minutes later. One used "every day in September at 18:05", exactly like my 42 entries. The other added the date: "September 30 at 18:05".
+
+The one with the date fired. The month-only one never did.
+
+On my Mac, launchd happily *loads* a calendar entry with a month and no day, and then never runs it. No error. No warning. Just silence, which is the worst kind of bug, because silence looks exactly like "not time yet".
+
+And my tests hadn't caught it, because I'd only ever tested the script with a fake clock. I never tested whether launchd would actually start it.
+
+So in the end I did the thing I "didn't love": one entry per date, 366 of them, each with its bucket's time. The plist is about 60 KB. The Mac doesn't care. It runs once a day, exactly on time, and speaks.
+
+The buckets still decide the times. They just can't shrink the file.
+
+Test the whole chain, not just the part you wrote.
+
+---
+
+## What I actually learned
 
 Version one was fine. It worked. The only reason there's a version two is that I went back and asked "why?" about my own decisions, and it turned out a few of them didn't have very good answers.
 
@@ -181,9 +205,7 @@ The people I worry about aren't the ones who ship the heavy version first. They'
 
 So this week's reminder is simple.
 
-Read the docs, especially the part that says what launchd *can't* do.
-
-But don't wait for the perfect design before you build the first one.
+Read the docs, But don't wait for the perfect design before you build the first one.
 
 And go watch the sunset.
 
@@ -205,7 +227,7 @@ launchctl bootout gui/$(id -u)/com.sachin.sunset-reminder   # turn it off
 | `generate.py` | Run once. Computes the year, builds the buckets, writes `schedule.tsv` and the plist. Change `LAT`/`LON`/`LEAD` here for another city or lead time. |
 | `schedule.tsv` | The 31 buckets: date range, reminder time, earliest sunset in the range. |
 | `messages.txt` | The 50 "Sunset alert!" lines. Edit freely. |
-| `com.sachin.sunset-reminder.plist` | The generated launchd schedule (42 month and time entries). |
+| `com.sachin.sunset-reminder.plist` | The generated launchd schedule: one entry per date (366), each at its bucket's time. |
 | `history/v1-sunset-reminder.py` | The original Python version, kept for the story. |
 
 Location is Pune (18.52°N, 73.86°E, IST). Times use the NOAA approximation and match published tables to within a couple of minutes.
