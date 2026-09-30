@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sachin.sunset-reminder</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>/Users/sachinghait/.local/bin/sunset-reminder</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict><key>Month</key><integer>1</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>48</integer></dict>
+        <dict><key>Month</key><integer>1</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>53</integer></dict>
+        <dict><key>Month</key><integer>1</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>58</integer></dict>
+        <dict><key>Month</key><integer>1</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>3</integer></dict>
+        <dict><key>Month</key><integer>2</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>3</integer></dict>
+        <dict><key>Month</key><integer>2</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Month</key><integer>2</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>13</integer></dict>
+        <dict><key>Month</key><integer>2</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>18</integer></dict>
+        <dict><key>Month</key><integer>3</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>18</integer></dict>
+        <dict><key>Month</key><integer>3</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>23</integer></dict>
+        <dict><key>Month</key><integer>3</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>28</integer></dict>
+        <dict><key>Month</key><integer>4</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>28</integer></dict>
+        <dict><key>Month</key><integer>4</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>33</integer></dict>
+        <dict><key>Month</key><integer>5</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>33</integer></dict>
+        <dict><key>Month</key><integer>5</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>38</integer></dict>
+        <dict><key>Month</key><integer>5</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>43</integer></dict>
+        <dict><key>Month</key><integer>6</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>43</integer></dict>
+        <dict><key>Month</key><integer>6</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>48</integer></dict>
+        <dict><key>Month</key><integer>6</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>51</integer></dict>
+        <dict><key>Month</key><integer>7</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>46</integer></dict>
+        <dict><key>Month</key><integer>7</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>51</integer></dict>
+        <dict><key>Month</key><integer>8</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>26</integer></dict>
+        <dict><key>Month</key><integer>8</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>31</integer></dict>
+        <dict><key>Month</key><integer>8</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>36</integer></dict>
+        <dict><key>Month</key><integer>8</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>41</integer></dict>
+        <dict><key>Month</key><integer>8</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>46</integer></dict>
+        <dict><key>Month</key><integer>9</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>1</integer></dict>
+        <dict><key>Month</key><integer>9</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>6</integer></dict>
+        <dict><key>Month</key><integer>9</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>11</integer></dict>
+        <dict><key>Month</key><integer>9</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>16</integer></dict>
+        <dict><key>Month</key><integer>9</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>21</integer></dict>
+        <dict><key>Month</key><integer>9</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>26</integer></dict>
+        <dict><key>Month</key><integer>10</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>41</integer></dict>
+        <dict><key>Month</key><integer>10</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>46</integer></dict>
+        <dict><key>Month</key><integer>10</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>51</integer></dict>
+        <dict><key>Month</key><integer>10</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>56</integer></dict>
+        <dict><key>Month</key><integer>10</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>1</integer></dict>
+        <dict><key>Month</key><integer>11</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>36</integer></dict>
+        <dict><key>Month</key><integer>11</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>41</integer></dict>
+        <dict><key>Month</key><integer>12</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>36</integer></dict>
+        <dict><key>Month</key><integer>12</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>41</integer></dict>
+        <dict><key>Month</key><integer>12</integer><key>Hour</key><integer>17</integer><key>Minute</key><integer>46</integer></dict>
+    </array>
+</dict>
+</plist>
